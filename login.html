@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login - Sistema de Identificación BrandName">
+  <title>Iniciar Sesión - BrandName</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+  <header class="main-header">
+    <div class="logo">
+      <i class="fa-brands fa-apple"></i>
+      <span>BrandName</span>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li class="user-access">
+          <a href="login.html" title="Login">
+            <i class="fa-solid fa-circle-user" style="font-size: 1.3rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-container">
+    <main class="main-content">
+      <section class="auth-card">
+        <h2>Bienvenido</h2>
+        <p style="color: #666; margin-bottom: 2rem;">Inicia sesión con tu ID de BrandName</p>
+
+        <form id="login-form">
+          <div class="form-group">
+            <input type="email" id="login-email" class="pro-input" placeholder="Correo electrónico" required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          </div>
+
+          <div class="form-group">
+            <input type="password" id="login-pass" class="pro-input" placeholder="Contraseña" required>
+            <button type="button" class="eye-btn" onclick="togglePass('login-pass')">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+
+          <button type="submit" class="btn-primary">Continuar</button>
+
+          <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+            ¿Aún no tienes cuenta? <a href="registro.html" style="color: var(--primary); font-weight: 600;">Crea la tuya ahora</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>© 2025 · SabiosOcultos · Proyecto Integrado</p>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>
